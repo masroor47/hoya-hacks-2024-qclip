@@ -21,7 +21,7 @@ The data for our AI Admissions Assistant project was gathered using a Python web
 
 Inside logic.py, we have several important functions that handle the actual data collection. The scrape function is key here. It works by visiting web pages, one by one, starting from the initial URL. First, it checks if we've already visited a page using the load_visited_urls function. This helps us avoid collecting the same data multiple times.
 
-Once it finds a new page, the scrape function uses Python’s requests library to access the page, just like a web browser would. After getting the page, it uses BeautifulSoup, another Python library, to read and understand the HTML content of the page. The main data we collect is the text found in paragraph (<p>) tags – these tags are commonly used for written content on websites.
+Once it finds a new page, the scrape function uses Python’s requests library to access the page, just like a web browser would. After getting the page, it uses BeautifulSoup, another Python library, to read and understand the HTML content of the page. The main data we collect is the text found in paragraph ('<p>') tags – these tags are commonly used for written content on websites.
 
 After extracting the text, the save_text_to_file function steps in. It saves the gathered text into a text file, naming each file in a way that makes it easy to know where the data came from.
 
