@@ -2,11 +2,11 @@
     "links": [
         {
             "label":"Home",
-            "href": "/"
+            "href": "/docs/"
         },
         {
             "label":"Documentation",
-            "href": "/documentation"
+            "href": "/docs/documentation"
         }
     ]
 }
