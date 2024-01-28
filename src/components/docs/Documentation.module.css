@@ -1,0 +1,10 @@
+.centered-container h2 {
+    font-weight: bold; /* Makes the header bold */
+    font-size: 1.5em; /* Adjust the size as needed */
+    margin-bottom: 10px; /* Space below the header */
+}
+
+.centered-container p {
+    font-size: 1em; /* Readable font size for the text */
+    margin-bottom: 10px; /* Space between paragraphs */
+}

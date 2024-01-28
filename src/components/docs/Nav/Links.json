@@ -1,0 +1,12 @@
+{
+    "links": [
+        {
+            "label":"Home",
+            "href": "/"
+        },
+        {
+            "label":"Documentation",
+            "href": "/documentation"
+        }
+    ]
+}

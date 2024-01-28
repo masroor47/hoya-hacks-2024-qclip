@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+}
+
+.snap-container {
+  overflow-x: none;
+}
+
+.qclip-title{
+  position: absolute;
+  color: #35517b;
+  font-size: 5vw;
+  margin: 3rem;
+  padding-bottom: 10rem;
+}
+
+.qc-text-color{
+  color: #253a58;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150vh;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150vh;
+}
+
+.scroll-container > .snap-container {
+  overflow-y: scroll;
+  height: 150vh;
+}
+
+.relative-div {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.clippy-text {
+  z-index: 1;
+  position: absolute;
+  font-weight: bold;
+  top: 22vh;
+  left: 50%;
+  font-size: 5vw;
+  transform: translate(-50%, 50%);
+  color: #35517b;;
+}
+
+.clippy-section {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+  scroll-snap-align: start;
+}
+
+.qc-image {
+  width: 70%;
+  position: absolute;
+  top: 20%;
+}
+
+.chat-input {
+  background-color: #ffffcc;
+  /* border-radius: 10%; */
+  z-index: 2;
+  position: absolute;
+  top: 85vh;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 50%;
+}
+
+.landing-text {
+  position: absolute;
+  color: #35517b;
+  font-size: 5vw;
+  margin: 3rem;
+  padding-bottom: 10rem;
+}
+
+.clippy-chat-bubble {
+  z-index: 2;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-end;
+  max-height: 15vh; /* Adjust max-height as needed */
+  overflow-y: auto;
+  padding: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: #ffffcc; /* Example background color */
+  border-radius: 5px; /* Example border radius */
+  margin: 10px 0; /* Add some margin */
+  width: 80%; /* Prevent the bubble from becoming too wide */
+  border-width: 0.5px;
+  border: solid;
+  border-color: rgb(53, 53, 53);
+  left: 50%;
+  bottom: 75vh;
+  /* transform: translate(-50%, 50%); */
+  transform: translate(-50%, 50%);
+  animation: slideDown 0.5s forwards;
+}
+
+.clippy-chat-bubble::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+.clippy-chat-bubble::-webkit-scrollbar-track {
+  background: transparent; /* Makes the scrollbar track transparent */
+}
+
+.clippy-chat-bubble::-webkit-scrollbar-thumb {
+  background: #888; /* Change to any color you prefer for the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+  border: 3px solid transparent; /* Simulates padding by using transparent border */
+  background-clip: content-box; 
+}
+
+.typing-animation span {
+  animation-delay: 1s;
+  opacity: 0;
+  display: inline-block; /* Treat each span as a block to apply the animation */
+  animation-name: typing;
+  animation-duration: 0.5s; /* Adjust the speed of the 'typing' effect */
+  animation-fill-mode: forwards; /* Keep the word visible after the animation ends */
+  animation-timing-function: ease-out;
+}
+
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 15vh;
+  }
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

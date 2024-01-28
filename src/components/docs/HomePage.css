@@ -1,0 +1,74 @@
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-top;
+    width: 1000px; /* Set a fixed width */
+    height: 1800px; /* Set a fixed height */
+    text-align: flex-start;
+    margin: auto; /* Optional: for centering the container itself */
+}
+
+.intro-text {
+    /* Add your styles here */
+    font-size: 20px;
+    justify-content: center;
+    color: #333;
+}
+
+.container-row {
+    display: flex;
+    justify-content: space-around; /* Adjusts the spacing between the cards */
+    margin-top: 20px; /* Space above the card row */
+}
+
+.container-row-two {
+    display: flex;
+    justify-content: space-around; /* Adjusts the spacing between the cards */
+    margin-top: 40px; /* Space above the card row */
+}
+
+.container-card {
+    border: 1px solid #ddd; /* Border for the card */
+    padding: 20px; /* Padding inside the card */
+    width: 40%; /* Width of each card */
+    text-align: left; /* Aligns text to the left */
+    border-radius: 10px;
+}
+
+.full-card {
+    border: 1px solid #ddd; /* Border for the card */
+    padding: 20px; /* Padding inside the card */
+    width: 100%; /* Width of each card */
+    text-align: left; /* Aligns text to the left */
+    border-radius: 10px;
+}
+
+.container-card-title {
+    font-size: 1.2em; /* Larger text for the title */
+    margin-bottom: 10px; /* Space below the title */
+    font-weight: bold; /* Makes the title bold */
+}
+
+.container-info {
+    border: 1px solid #ddd; /* Border for the card */
+    padding: 20px; /* Padding inside the card */
+    width: 28%; /* Width of each card */
+    text-align: left; /* Aligns text to the left */
+    border-radius: 10px;
+    margin: 10px; /* Optional: Adds some space around each card */
+}
+
+.container-info-special .container-card-title,
+.container-info-special div {
+    text-align: center; /* Center aligns the text */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Clippy
+* source:	https://sketchfab.com/3d-models/clippy-5d22208e1d4044ed84b62d821f6829b1
+* author:	ironflower (https://sketchfab.com/ironflower)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Clippy" (https://sketchfab.com/3d-models/clippy-5d22208e1d4044ed84b62d821f6829b1) by ironflower (https://sketchfab.com/ironflower) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
