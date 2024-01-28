@@ -16,16 +16,22 @@ export const ChatInput = ({ setClippyText }: ChatInputProps) => {
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && !event.shiftKey) {
       event.preventDefault();
+      setClippyText("");
       // setClippyText(inputValue);
       setInputValue("");
-      fetch("https://ajjadb.pythonanywhere.com/get-completion", {
+
+      const url = "https://ajjadb.pythonanywhere.com/get-completion";
+      const headers = {
+        "Content-Type": "application/json",
+      };
+      const data = {
+        content: inputValue,
+      };
+
+      fetch(url, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          content: inputValue,
-        }),
+        headers: headers,
+        body: JSON.stringify(data),
       })
         .then((response) => response.json())
         .then((data) => {
