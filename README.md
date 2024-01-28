@@ -1,5 +1,4 @@
 # hoya-hacks-2024-qclip
-# hoya-hacks-2024-qclip
 
 This is our team's submission for the Microsoft Azure Cloudflare track.
 
