@@ -7,29 +7,57 @@ interface ChatInputProps {
 }
 
 export const ChatInput = ({ setClippyText }: ChatInputProps) => {
+  const [inputValue, setInputValue] = React.useState<string>("");
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setClippyText(event.target.value); // Update the state with the new input value
+    setInputValue(event.target.value);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      // setClippyText(inputValue);
+      setInputValue("");
+      fetch("https://ajjadb.pythonanywhere.com/get-completion", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          content: inputValue,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const { content } = data.choices[0].message;
+          setClippyText(content);
+          console.log("TEST", content);
+        })
+        .catch((error) => console.error("Error:", error));
+    }
   };
 
   return (
     <div className="chat-input">
       <TextField
+        value={inputValue}
         variant="standard"
         fullWidth
         multiline
         rows={1}
-        onChange={handleChange} // Add the onChange handler here
+        onChange={handleChange}
+        onKeyDown={handleKeyDown}
         inputProps={{
-          style: { fontSize: "1.5rem" }, // Directly style the <input> element
+          style: { fontSize: "1.5rem" },
         }}
         InputProps={{
           sx: {
-            fontSize: "1.5rem", // Style the root of the input component
-            padding: "12px", // Adjust the padding
+            fontSize: "1.5rem",
+            padding: "12px",
           },
         }}
         InputLabelProps={{
-          sx: { fontSize: "1.25rem" }, // If you have a label and want to adjust its size
+          sx: { fontSize: "1.25rem" },
         }}
       />
     </div>
