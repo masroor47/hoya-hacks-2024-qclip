@@ -10,7 +10,7 @@ Presenting QClip.
 
 
 ### Dev Team:
-* Adam Jablonka              - *Front End*
-* Carlos Vega                - *Infrastructure / Documentation*
+* Adam Jablonka              - *Front End / Backend*
+* Carlos Vega                - *Infrastructure / Front End / Documentation*
 * Loyd Flores                - *Fine Tuning*
 * Masroor Khonkhodzhaev      - *Backend*
